@@ -1,9 +1,10 @@
 
 campus = {
-    "Hostel": {"Cafeteria": 150, "Admin Block": 300}, "Cafeteria": {"Academic Block": 200},"Admin Block": {"Academic Block": 120}, "Academic Block": {"Library": 100},  "Library": {} }
+    "Hostel": {"Cafeteria": 150, "Admin Block": 300,"Parking Area": 80},
+"Parking Area": {"Admin Block": 250}, "Cafeteria": {"Academic Block": 200},"Admin Block": {"Academic Block": 120}, "Academic Block": {"Library": 100},  "Library": {} }
 
 heuristic = {
-    "Hostel": 350,"Cafeteria": 260,"Admin Block": 150, "Academic Block": 90, "Library": 0 }
+    "Hostel": 350,"Cafeteria": 260,"Admin Block": 150,"Parking Area": 320, "Academic Block": 90, "Library": 0 }
 
 def get_h(path):
     return heuristic[path[-1]]
