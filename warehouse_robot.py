@@ -24,12 +24,12 @@ def get_f(path):
 
 def a_star(start, goal):
     frontier = [[start]]
-    explored = 0
+   
     while frontier:
         frontier.sort(key=get_f)
         path = frontier.pop(0)
         node = path[-1]
-        explored += 1
+        
         print("Exploring:", node,
               "g =", get_g(path),
               "h =", get_h(path),
@@ -37,7 +37,7 @@ def a_star(start, goal):
         if node == goal:
             print("Path found by A*:", path)
             print("Total cost of this path:", get_g(path))
-            print("Total nodes explored:", explored)
+            
             return path
         for neighbour in warehouse[node]:
             frontier.append(path + [neighbour])
